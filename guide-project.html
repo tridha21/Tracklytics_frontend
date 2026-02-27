@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Students Projects - ProTrack</title>
+
+  <link rel="stylesheet" href="dashboard.css" />
+<link rel="stylesheet" href="guide-project.css">
+
+<!-- FontAwesome for search icon -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+ <link
+    rel="stylesheet"
+    href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css"
+  />
+</head>
+
+<body>
+
+<!-- ================= TOPBAR ================= -->
+<div class="topbar">
+
+  <div class="brand">
+    <img src="image/logo.png">
+    <div class="brand-text">
+      <div class="brand-name">ProTrack</div>
+      <div class="brand-tagline">
+        Multi-Guide Project & Evaluation Management System
+      </div>
+    </div>
+  </div>
+
+  <div class="user-info">
+    <img src="image/user.png">
+    <div>
+      <strong>John Smith</strong>
+      <span>Guide</span>
+    </div>
+  </div>
+
+</div>
+
+<!-- ================= CONTENT ================= -->
+<div class="page">
+
+  <div class="breadcrumb">
+        <a href="HomeStudent.html">Home</a>
+        &nbsp;›&nbsp;
+        Students' Projects
+    </div>
+
+  <h1>Students’ Projects</h1>
+
+  <!-- FILTER BAR -->
+  <div class="filters">
+
+    <select id="domainFilter">
+      <option value="all">All Domains</option>
+      <option value="IoT">IoT</option>
+      <option value="AI">AI</option>
+      <option value="Energy">Energy</option>
+    </select>
+
+    <select id="statusFilter">
+      <option value="all">All Statuses</option>
+      <option value="In Progress">In Progress</option>
+      <option value="Pending">Pending</option>
+      <option value="Completed">Completed</option>
+    </select>
+
+    <!-- YOUR SEARCH COMPONENT -->
+    <div class="search-box project-search">
+      <input id="searchInput" type="text" placeholder="Search" />
+      <button class="search-btn">
+        <i class="fa-regular fa-magnifying-glass"></i>
+        
+      </button>
+    </div>
+
+  </div>
+
+  <!-- PROJECT GRID -->
+  <div id="projectGrid" class="project-grid"></div>
+
+</div>
+
+<script src="guide-project.js"></script>
+</body>
+</html>

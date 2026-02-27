@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", system-ui;
+}
+
+body {
+  background: #9fccfa;
+}
+
+/* ================= TOPBAR ================= */
+
+/* .topbar {
+  background: #9fccfa;
+  padding: 14px 28px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand img {
+  height: 50px;
+}
+
+.brand-name {
+  font-size: 22px;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.1;
+}
+
+.brand-tagline {
+  font-size: 13px;
+  color:  rgba(255, 255, 255, 0.9);;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, .2);
+  padding: 8px 14px;
+  border-radius: 12px;
+}
+
+.user-info img {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+} */
+
+/* ================= PAGE ================= */
+
+.page {
+  padding: 10px 40px 32px 40px;
+  /* 🔥 reduced top space */
+}
+
+/* ================= BREADCRUMB ================= */
+
+.breadcrumb {
+  margin-top: 0;
+  margin-bottom: 6px;
+  /* 🔥 tighter spacing */
+  font-size: 14px;
+  color: #555;
+}
+
+.breadcrumb a {
+  color: #2f6fd6;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+/* ================= TITLE ================= */
+
+h1 {
+  margin-top: 4px;
+  /* 🔥 prevents extra gap */
+  margin-bottom: 22px;
+  color: #1b2b4b;
+}
+
+/* ================= FILTERS ================= */
+
+.filters {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+select {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #d6e1f5;
+  background: #fff;
+}
+
+/* ================= SEARCH BOX ================= */
+
+.search-box {
+   flex: 1 1 auto; /* THIS element gives up space */
+
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #d7e3f6;
+  max-width: 520px;
+}
+
+.search-box input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 10px 14px;
+  font-size: 14px;
+}
+
+.search-btn {
+  width: 54px;
+  height: 100%;
+  border: none;
+  background: transparent;
+  color: #5AB2FF;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search-btn i {
+  font-size: 18px;
+}
+
+.search-btn:hover {
+  background: #9fccfa;
+  color: #fff;
+}
+
+.search-box:focus-within {
+  box-shadow: 0 0 0 3px rgba(116, 192, 252, 0.35);
+}
+
+/* ================= PROJECT GRID ================= */
+
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.card {
+  background: #fff;
+  padding: 22px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, .08);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  color: #284a86;
+}
+
+.meta {
+  margin: 6px 0;
+  color: #4f6486;
+}
+
+.status {
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.inprogress {
+  background: #f3e3d2;
+}
+
+.pending {
+  background: #f6dada;
+}
+
+.completed {
+  background: #d9efe1;
+}
+
+.evaluate-btn {
+  margin-top: 14px;
+  background: #9fccfa;
+  border: none;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.evaluate-btn:hover {
+  background: #7fbaf3;
+}

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Tracklytics | IoT Smart Campus</title>
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css" />
+
+    <!-- Chart JS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="stylesheet" href="dashboard.css" />
+    <link rel="stylesheet" href="student-project.css" />
+</head>
+
+<body>
+
+    <header class="topbar">
+        <div class="brand">
+            <img src="image/logo.png" alt="logo" />
+            <div class="brand-text">
+                <span class="brand-name">Tracklytics</span>
+                <small class="brand-tagline">
+                    Multi-Guide Project & Evaluation Management System
+                </small>
+            </div>
+        </div>
+
+        <div class="user-info">
+            <img src="image/user.png" />
+            <div>
+                <strong>Alice</strong>
+                <span>Student</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <a href="HomeStudent.html">Home</a>
+        &nbsp;›&nbsp;
+        IoT Smart Campus
+    </div>
+
+    <section class="page-header">
+        <h1>IoT Smart Campus</h1>
+        <p>This page is only accessible to group members</p>
+    </section>
+
+    <main class="grid">
+
+        <!-- PROJECT DETAILS -->
+        <section class="card">
+            <h3>Project Details</h3>
+
+            <div class="project-info">
+                <img src="image/p1.png" alt="project" />
+                <div>
+                    <strong>IoT Smart Campus</strong>
+                    <p><b>Guides:</b> Dr. Johnson, Prof. Singh</p>
+                    <p><b>Domain:</b> Internet of Things (IoT)</p>
+                    <p><b>Tech Stack:</b> Arduino, Raspberry Pi, Sensor Networks</p>
+                </div>
+            </div>
+
+            <div class="idea">
+                <h4>Project Idea</h4>
+                <p>
+                    Develop a smart campus system using IoT devices for energy
+                    optimization, security, and environmental monitoring.
+                </p>
+            </div>
+        </section>
+
+        <!-- TASK LIST -->
+        <section class="card">
+            <h3>Task List</h3>
+
+            <ul class="tasks">
+                <li class="done">
+                    <i class="fa-solid fa-check"></i>
+                    Hardware Installation
+                    <span>Completed</span>
+                </li>
+
+                <li class="progress">
+                    <i class="fa-solid fa-spinner"></i>
+                    Testing IoT Devices
+                    <span>In Progress</span>
+                </li>
+
+                <li class="pending">
+                    <i class="fa-regular fa-clock"></i>
+                    Software Development
+                    <span>Pending</span>
+                </li>
+            </ul>
+        </section>
+
+        <!-- ✅ EXACT PROGRESS CHART CARD -->
+        <section class="card progress-card">
+            <h3>Progress Review</h3>
+
+            <div class="progress-chart-layout">
+
+                <canvas id="progressChart"></canvas>
+
+                <div class="progress-info">
+                    <p class="title">Task Progress</p>
+
+                    <div class="row">
+                        <span class="dot completed"></span>
+                        Completed <b id="cVal">0%</b>
+                    </div>
+
+                    <div class="row">
+                        <span class="dot progress"></span>
+                        In Progress <b id="pVal">0%</b>
+                    </div>
+
+                    <div class="row">
+                        <span class="dot pending"></span>
+                        Pending <b id="penVal">0%</b>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- TEAM -->
+        <section class="card">
+            <h3>Team Members</h3>
+
+            <div class="member">
+                <img src="image/user.png" />
+                <div>
+                    <strong>Alice</strong>
+                    <span>Group Leader</span>
+                </div>
+            </div>
+
+            <div class="member">
+                <img src="image/user.png" />
+                <div>
+                    <strong>Bob</strong>
+                    <span>Student</span>
+                </div>
+            </div>
+
+            <div class="member">
+                <img src="image/user.png" />
+                <div>
+                    <strong>Fiona</strong>
+                    <span>Student</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- FILES -->
+        <section class="card">
+            <h3>Files & Links</h3>
+
+            <ul class="files">
+                <li><i class="fa-solid fa-file-pdf"></i>proposal_iot_smart_campus.pdf</li>
+                <li><i class="fa-solid fa-file-word"></i>report_update.docx</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <script src="student-project.js"></script>
+</body>
+
+</html>

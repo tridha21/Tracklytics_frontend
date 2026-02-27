@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Tracklytics | Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css" />
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <!-- TOP BAR -->
+    <header class="topbar">
+
+        <div class="brand">
+            <img src="image/logo.png" alt="logo" />
+
+            <div class="brand-text">
+                <span class="brand-name">Tracklytics</span>
+                <small class="brand-tagline">
+                    Multi-Guide Project & Evaluation Management System
+                </small>
+            </div>
+        </div>
+
+
+        <div class="search-box">
+            <input type="text" placeholder="Search projects, groups, files..." />
+
+            <button class="search-btn" aria-label="Search">
+
+                <i class="fa-regular fa-magnifying-glass"></i>
+            </button>
+        </div>
+
+        <div class="user-dropdown">
+
+    <div class="user-info" id="userToggle">
+        <img src="image/user.png" />
+        <div>
+            <strong>John Smith</strong>
+            <span>Guide</span>
+        </div>
+        <i class="fa-solid fa-chevron-down"></i>
+    </div>
+
+    <!-- DROPDOWN MENU -->
+    <div class="dropdown-menu" id="guideMenu">
+        <button id="logoutBtn">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            Log Out
+        </button>
+    </div>
+
+</div>
+    </header>
+
+    <!-- MAIN -->
+    <main class="dashboard">
+
+        <!-- LEFT -->
+        <section class="card">
+            <h3>All Groups</h3>
+
+            <div class="group">
+                <div class="group-info">
+                    <h4>IoT Smart Campus</h4>
+                    <p>Guide: Dr. Johnson</p>
+                    <p>Alice, Bob, Eve</p>
+                </div>
+
+                <button class="view-btn">View Project</button>
+            </div>
+
+            <div class="group">
+                <div class="group-info">
+                    <h4>AI in Education</h4>
+                    <p>Guide: Prof. Williams</p>
+                    <p>Carol, David, Fiona</p>
+                </div>
+                <button class="view-btn">View Project</button>
+            </div>
+
+            <div class="group">
+                <div class="group-info">
+                    <h4>AI in Robotics</h4>
+                    <p>Guide: Prof. Orhan</p>
+                    <p>Ferit, Seyran, Suna</p>
+                </div>
+                <button class="view-btn">View Project</button>
+            </div>
+<!-- 
+            <button class="primary">Propose New Group</button> -->
+        </section>
+
+        <!-- CENTER -->
+        <section class="card">
+            <h3>Latest Updates</h3>
+
+            <ul class="updates">
+                <li>
+                    <span class="icon">⭐</span>
+                    <span>Prototype Development – Testing completed</span>
+                </li>
+                <li>
+                    <span class="icon">📘</span>
+                    <span>AI in Education – Progress report uploaded</span>
+                </li>
+                <li>
+                    <span class="icon">📂</span>
+                    <span>IoT Smart Campus – New documents added</span>
+                </li>
+                <li>
+                    <span class="icon">✅</span>
+                    <span>Blockchain App – Final report submitted</span>
+                </li>
+            </ul>
+        </section>
+
+
+        <section class="card">
+            <h3>Project Progress</h3>
+
+            <div class="progress-layout">
+                <canvas id="projectChart"></canvas>
+
+                <div class="progress-legend">
+                    <div class="row">
+                        <span class="dot completed"></span>
+                        Completed <b id="cNum">0</b>
+                    </div>
+
+                    <div class="row">
+                        <span class="dot progress"></span>
+                        In Progress <b id="pNum">0</b>
+                    </div>
+
+                    <div class="row">
+                        <span class="dot pending"></span>
+                        Pending <b id="penNum">0</b>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SMALL SUMMARY BOXES -->
+            <div class="project-stats">
+                <div class="stat completed">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>5 Completed Projects</span>
+                    <b>5</b>
+                </div>
+
+                <div class="stat progress">
+                    <i class="fa-solid fa-spinner"></i>
+                    <span>4 Projects In Progress</span>
+                    <b>4</b>
+                </div>
+
+                <div class="stat pending">
+                    <i class="fa-solid fa-clock"></i>
+                    <span>2 Pending Projects</span>
+                    <b>2</b>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="dashboard.js"></script>
+</body>
+
+</html>

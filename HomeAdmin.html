@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tracklytics | Admin Dashboard</title>
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css"
+  />
+
+  <link rel="stylesheet" href="dashboard.css" />
+  <link rel="stylesheet" href="admin.css" />
+</head>
+
+<body>
+
+  <!-- TOP BAR -->
+  <header class="topbar">
+    <div class="brand">
+      <img src="image/logo.png" alt="logo" />
+      <div class="brand-text">
+        <span class="brand-name">Tracklytics</span>
+        <small class="brand-tagline">
+          Multi-Guide Project & Evaluation Management System
+        </small>
+      </div>
+    </div>
+
+    <div class="user-dropdown">
+
+  <div class="user-info" id="adminToggle">
+    <img src="image/user.png" />
+    <div>
+      <strong>Admin</strong>
+      <span>System Administrator</span>
+    </div>
+    <i class="fa-solid fa-chevron-down"></i>
+  </div>
+
+  <!-- DROPDOWN -->
+  <div class="dropdown-menu" id="adminMenu">
+    <button id="logoutBtn">
+      <i class="fa-solid fa-right-from-bracket"></i>
+      Log Out
+    </button>
+  </div>
+
+</div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="dashboard">
+
+    <!-- LEFT: USERS -->
+    <section class="card">
+      <h3>User Management</h3>
+
+      <div class="admin-item">
+        <div>
+          <h4>Students</h4>
+          <p>View, add, remove students</p>
+        </div>
+        <button>Manage</button>
+      </div>
+
+      <div class="admin-item">
+        <div>
+          <h4>Guides</h4>
+          <p>Assign guides to groups</p>
+        </div>
+        <button>Manage</button>
+      </div>
+
+      <button class="primary">Add New User</button>
+    </section>
+
+    <!-- CENTER: GROUPS -->
+    <section class="card">
+      <h3>Group & Project Control</h3>
+
+      <div class="admin-item">
+        <div>
+          <h4>Project Groups</h4>
+          <p>Create / edit / delete groups</p>
+        </div>
+        <button>Open</button>
+      </div>
+
+      <div class="admin-item">
+        <div>
+          <h4>Guide Assignments</h4>
+          <p>Assign multiple guides</p>
+        </div>
+        <button>Assign</button>
+      </div>
+
+      <button class="primary">Create New Group</button>
+    </section>
+
+    <!-- RIGHT: SYSTEM -->
+    <section class="card">
+      <h3>System Overview</h3>
+
+      <ul class="stats">
+        <li><strong>120</strong> Students</li>
+        <li><strong>18</strong> Guides</li>
+        <li><strong>32</strong> Groups</li>
+        <li><strong>95%</strong> Submissions</li>
+      </ul>
+
+      <button class="danger">System Settings</button>
+    </section>
+
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>

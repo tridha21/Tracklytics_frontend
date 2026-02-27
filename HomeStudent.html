@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Tracklytics | Student Dashboard</title>
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css"
+  />
+
+  <!-- Dashboard CSS -->
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+
+<body>
+
+  <!-- TOP BAR -->
+  <header class="topbar">
+    <div class="brand">
+      <img src="image/logo.png" alt="logo" />
+      <div class="brand-text">
+        <span class="brand-name">Tracklytics</span>
+        <small class="brand-tagline">
+          Multi-Guide Project & Evaluation Management System
+        </small>
+      </div>
+    </div>
+
+    <div class="search-box">
+      <input type="text" placeholder="Search files, updates..." />
+      <button class="search-btn">
+        <i class="fa-regular fa-magnifying-glass"></i>
+      </button>
+    </div>
+
+    <!-- STUDENT DROPDOWN -->
+    <div class="user-dropdown">
+      <div class="user-info" id="studentMenuBtn">
+        <img src="image/user.png" />
+        <div>
+          <strong>Student</strong>
+          <span>Final Year</span>
+        </div>
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+
+      <div class="dropdown-menu" id="studentDropdown">
+        <button id="myGroupBtn">
+          <i class="fa-solid fa-users"></i>
+          My Group
+        </button>
+        <button id="logoutBtn">
+          <i class="fa-solid fa-right-from-bracket"></i>
+          Log out
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="dashboard">
+
+    <!-- LEFT: MY GROUP -->
+    <section class="card">
+      <h3>My Project Group</h3>
+
+      <div class="group">
+        <div class="group-info">
+          <h4>IoT Smart Campus</h4>
+          <p>Guide: Dr. Johnson</p>
+          <p>Team: Alice, Bob, Eve</p>
+        </div>
+      </div>
+
+      <button class="primary" id="viewProjectBtn" type="button">
+        View Details
+      </button>
+    </section>
+
+    <!-- CENTER: UPDATES -->
+    <section class="card">
+      <h3>Latest Updates</h3>
+
+      <ul class="updates">
+        <li>
+          <span class="icon">📘</span>
+          <span>Guide feedback added</span>
+        </li>
+        <li>
+          <span class="icon">📂</span>
+          <span>New documents uploaded</span>
+        </li>
+        <li>
+          <span class="icon">⏰</span>
+          <span>Next review on 25 Sept</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- RIGHT: SUBMISSIONS -->
+    <section class="card">
+      <h3>My Submissions</h3>
+
+      <ul class="ideas">
+        <li>
+          <span class="icon">✅</span>
+          <span>Proposal Submitted</span>
+        </li>
+        <li>
+          <span class="icon">🕒</span>
+          <span>Mid Review Pending</span>
+        </li>
+        <li>
+          <span class="icon">❌</span>
+          <span>Final Report Not Submitted</span>
+        </li>
+      </ul>
+
+      <button class="primary">Upload Report</button>
+    </section>
+
+    <!-- BOTTOM: FILES -->
+    <section class="card full">
+      <h3>Project Files</h3>
+
+      <div class="projects">
+        <div class="project">
+          <img src="image/p1.png" />
+          <h4>Proposal.pdf</h4>
+          <button>Download</button>
+        </div>
+
+        <div class="project">
+          <img src="image/p2.jpg" />
+          <h4>Progress_Report.docx</h4>
+          <button>Download</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- JS -->
+  <script src="student.js"></script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: url("image/bg.png") no-repeat center center/cover;
+}
+
+.page-wrapper {
+    height: 100%;
+    background: linear-gradient(
+        rgba(159, 204, 250, 0.85),
+        rgba(159, 204, 250, 0.85)
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    width: 420px;
+    text-align: center;
+    color: #fff;
+}
+
+.logo-section {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.logo-img {
+    width: 96px;
+    height: 96px;
+    display: block;
+    margin: 0 auto; 
+    object-fit: contain;
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.25));
+}
+.logo-section h1 {
+    font-size: 32px;
+    font-weight: 600;
+    margin: 4px 0 0; 
+    line-height: 1;   
+}
+
+.logo-section p {
+    margin-top: 6px;
+    margin-bottom: 24px;
+}
+
+
+.login-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 28px 28px 0;
+    color: #333;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+    overflow: hidden;
+    animation: fadeUp 0.5s ease;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.login-card h2 {
+    text-align: left;
+    margin-bottom: 20px;
+    color: #5AB2FF;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    background: #f1f4fb;
+    border-radius: 6px;
+    margin-bottom: 14px;
+    padding: 10px;
+}
+
+.input-group .icon {
+    margin-right: 8px;
+    opacity: 0.6;
+}
+
+.input-group input {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+    font-size: 14px;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background: #5AB2FF;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+.login-btn:hover {
+    background: #A0DEFF;
+}
+
+.forgot {
+    display: block;
+    text-align: left;
+    margin-top: 10px;
+    font-size: 13px;
+    color: #2c4ea5;
+    text-decoration: none;
+}
+
+.forgot:hover {
+    text-decoration: underline;
+}
+
+.footer-illustration {
+    margin-top: 20px;
+    height: 90px;
+    background: linear-gradient(to top, #e8eefc, transparent);
+    border-radius: 0 0 8px 8px;
+}
+
+.footer-text {
+    margin-top: 14px;
+    font-size: 12px;
+    opacity: 0.85;
+}
+
+.college-illustration {
+    margin-top: 16px;
+    width: 100%;
+}
+
+.college-illustration img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}

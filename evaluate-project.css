@@ -1,0 +1,277 @@
+/* =========================
+   BREADCRUMB
+========================= */
+.breadcrumb{
+padding:12px 28px;
+font-size:14px;
+color:#555;
+}
+
+.breadcrumb a{
+color:#2f6fd6;
+text-decoration:none;
+}
+
+/* =========================
+   PAGE HEADER
+========================= */
+.page-header{
+padding:10px 28px 6px 28px;
+}
+
+.page-header h1{
+font-size:26px;
+font-weight:600;
+}
+
+/* =========================
+   GRID LAYOUT
+========================= */
+.eval-grid{
+padding:12px 28px 26px 28px;
+display:grid;
+grid-template-columns:1.1fr 1fr;
+gap:22px;
+}
+
+/* =========================
+   CARDS
+========================= */
+.eval-card{
+background:white;
+border-radius:14px;
+box-shadow:0 6px 18px rgba(0,0,0,0.08);
+overflow:hidden;
+}
+
+/* space between left cards */
+.left .eval-card{
+margin-bottom:18px;
+}
+
+/* =========================
+   CARD HEADER
+========================= */
+.card-header{
+background:linear-gradient(90deg,#2f6fd6,#5AB2FF);
+color:white;
+padding:12px 16px;
+font-weight:600;
+font-size:17px;
+}
+
+/* =========================
+   PROJECT DETAILS
+========================= */
+.project-info{
+display:flex;
+gap:12px;
+padding:16px;
+}
+
+.project-info img{
+width:90px;
+border-radius:8px;
+}
+
+.idea{
+padding:0 16px 14px;
+font-size:14px;
+line-height:1.5;
+}
+
+.files{
+background:#f6f8fd;
+margin:12px 16px;
+padding:12px;
+border-radius:10px;
+font-size:14px;
+}
+
+/* =========================
+   TEAM MEMBERS
+========================= */
+.members{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:12px;
+padding:16px;
+}
+
+.member{
+display:flex;
+gap:10px;
+align-items:center;
+background:#f6f8fd;
+padding:10px;
+border-radius:10px;
+}
+
+.member img{
+width:40px;
+border-radius:50%;
+}
+
+/* =========================
+   EVALUATION FORM
+========================= */
+
+/* 🔥 MAIN FORM LAYOUT SYSTEM */
+.form-body{
+padding:18px;
+display:flex;
+flex-direction:column;
+gap:18px; /* controls ALL spacing */
+}
+
+/* form rows */
+.form-row{
+display:flex;
+flex-direction:column;
+gap:8px;
+}
+
+.form-row label{
+font-weight:500;
+font-size:15px;
+}
+
+/* =========================
+   SLIDER SCALE
+========================= */
+.slider-wrapper{
+width:100%;
+}
+
+.scale-labels{
+display:flex;
+justify-content:space-between;
+font-size:13px;
+color:#777;
+margin-bottom:4px;
+}
+
+.slider-box{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+#progressRange{
+flex:1;
+height:6px;
+cursor:pointer;
+}
+
+/* custom thumb */
+#progressRange::-webkit-slider-thumb{
+appearance:none;
+width:18px;
+height:18px;
+border-radius:50%;
+background:#2f6fd6;
+cursor:pointer;
+}
+
+/* =========================
+   STAR RATINGS
+========================= */
+.rating-row{
+display:flex;
+justify-content:space-between;
+align-items:center;
+font-size:15px;
+}
+
+.star-group{
+display:flex;
+gap:6px;
+}
+
+.star{
+font-size:18px;
+color:#ccc;
+cursor:pointer;
+transition:0.2s;
+}
+
+.star.active{
+color:#f6b01e;
+}
+
+/* =========================
+   COMMENT BOX
+========================= */
+textarea{
+width:100%;
+height:95px;
+border-radius:10px;
+border:1px solid #ddd;
+padding:10px;
+resize:none;
+font-family:inherit;
+}
+
+/* =========================
+   SUBMIT BUTTON
+========================= */
+.submit-btn{
+padding:12px;
+border:none;
+border-radius:10px;
+background:#5AB2FF;
+color:white;
+font-size:15px;
+cursor:pointer;
+}
+
+.submit-btn:hover{
+background:#A0DEFF;
+color:#fff;
+}
+
+/* =========================
+   GUIDE DROPDOWN MENU
+========================= */
+
+.user-dropdown{
+position:relative;
+}
+
+.user-info{
+cursor:pointer;
+}
+
+.dropdown-menu{
+position:absolute;
+right:0;
+top:52px;
+background:#fff;
+border-radius:10px;
+box-shadow:0 8px 24px rgba(0,0,0,0.12);
+min-width:160px;
+display:none;
+flex-direction:column;
+overflow:hidden;
+z-index:100;
+}
+
+.dropdown-menu button{
+background:none;
+border:none;
+padding:12px 14px;
+display:flex;
+align-items:center;
+gap:10px;
+font-size:14px;
+cursor:pointer;
+color:#333;
+}
+
+.dropdown-menu button:hover{
+background:#f2f6ff;
+}
+
+.dropdown-menu.show{
+display:flex;
+}

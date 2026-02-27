@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ProTrack | Create or Join Group</title>
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css"
+  />
+
+  <!-- Reuse existing dashboard styles -->
+  <link rel="stylesheet" href="dashboard.css" />
+  <link rel="stylesheet" href="student-group.css" />
+</head>
+
+<body>
+
+  <!-- TOP BAR -->
+  <header class="topbar">
+    <div class="brand">
+      <img src="image/logo.png" alt="logo" />
+      <div class="brand-text">
+        <span class="brand-name">ProTrack</span>
+        <small class="brand-tagline">
+          Multi-Guide Project & Evaluation Management System
+        </small>
+      </div>
+    </div>
+
+    <!-- USER DROPDOWN -->
+    <div class="user-dropdown">
+      <div class="user-info" id="studentMenuBtn">
+        <img src="image/user.png" />
+        <div>
+          <strong>Alice</strong>
+          <span>Student</span>
+        </div>
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+
+      <!-- ONLY LOGOUT OPTION -->
+      <div class="dropdown-menu" id="studentDropdown">
+        <button id="logoutBtn">
+          <i class="fa-solid fa-right-from-bracket"></i> Log out
+        </button>
+      </div>
+    </div>
+
+  </header>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <a href="HomeStudent.html">Home</a> &nbsp;›&nbsp; Create or Join Group
+  </div>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <h1>Create or Join a Group</h1>
+    <p>
+      Start working on your final year project by creating a new group or
+      joining an existing team.
+    </p>
+  </section>
+
+  <!-- CONTENT -->
+  <section class="group-grid">
+
+    <!-- CREATE GROUP -->
+    <div class="group-card">
+      <h3>Create a New Group</h3>
+
+      <label>Project Title</label>
+      <input type="text" placeholder="IoT Smart Campus" />
+
+      <label>Select max team size</label>
+      <div class="team-size">
+        <button>2</button>
+        <button>3</button>
+        <button>4</button>
+        <button>5</button>
+      </div>
+
+      <button class="primary full-width">
+        Create Group
+      </button>
+    </div>
+
+    <!-- JOIN GROUP -->
+    <div class="group-card">
+      <h3>Join an Existing Team</h3>
+
+      <label>Invite Code</label>
+      <input type="text" placeholder="Enter invite code" />
+
+      <button class="primary full-width success">
+        Join Group
+      </button>
+    </div>
+
+  </section>
+
+  <script src="student-group.js"></script>
+</body>
+</html>

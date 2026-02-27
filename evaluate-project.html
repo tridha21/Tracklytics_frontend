@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Tracklytics | Evaluate Project</title>
+
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="evaluate-project.css">
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css" />
+</head>
+
+<body>
+
+    <!-- TOPBAR -->
+    <header class="topbar">
+        <div class="brand">
+            <img src="image/logo.png">
+            <div class="brand-text">
+                <span class="brand-name">Tracklytics</span>
+                <small class="brand-tagline">
+                    Multi-Guide Project & Evaluation Management System
+                </small>
+            </div>
+        </div>
+        <div class="user-dropdown">
+
+            <div class="user-info" id="userToggle">
+                <img src="image/user.png">
+                <div>
+                    <strong>John Smith</strong>
+                    <span>Guide</span>
+                </div>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+
+            <!-- DROPDOWN MENU -->
+            <div class="dropdown-menu" id="guideMenu">
+                <button id="logoutBtn">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Log Out
+                </button>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- BREADCRUMB -->
+    <div class="breadcrumb">
+        <a href="guide-dashboard.html">Home</a>
+        &nbsp;›&nbsp;
+        Evaluate Project
+    </div>
+
+    <!-- HEADER -->
+    <section class="page-header">
+        <h1>Evaluate Project: IoT Smart Campus</h1>
+    </section>
+
+    <!-- MAIN GRID -->
+    <main class="eval-grid">
+
+        <!-- LEFT COLUMN -->
+        <div class="left">
+
+            <section class="eval-card">
+                <div class="card-header">Project Details</div>
+
+                <div class="project-info">
+                    <img src="image/p1.png">
+                    <div>
+                        <h3>IoT Smart Campus</h3>
+                        <p><b>Guides:</b> Dr. Johnson, Dr. Williams, Prof. Singh</p>
+                        <p><b>Domain:</b> Internet of Things (IoT)</p>
+                        <p><b>Tech Stack:</b> Arduino, Raspberry Pi, Sensor Networks</p>
+                    </div>
+                </div>
+
+                <p class="idea">
+                    <b>Project Idea:</b> Develop a smart campus system using IoT devices
+                    for managing energy consumption, security, and environmental monitoring.
+                </p>
+
+                <div class="files">
+                    <div>📄 Proposal Document: proposal_iot_smart_campus.pdf</div>
+                    <div>📄 Progress Report 3: report_update.docx</div>
+                </div>
+            </section>
+
+            <section class="eval-card">
+                <div class="card-header">Team Members</div>
+
+                <div class="members">
+
+                    <div class="member">
+                        <img src="image/user.png">
+                        <div>
+                            <strong>Alice</strong>
+                            <span>Group Leader</span>
+                        </div>
+                    </div>
+
+                    <div class="member">
+                        <img src="image/user.png">
+                        <div>
+                            <strong>Bob</strong>
+                            <span>Student</span>
+                        </div>
+                    </div>
+
+                    <div class="member">
+                        <img src="image/user.png">
+                        <div>
+                            <strong>Fiona</strong>
+                            <span>Student</span>
+                        </div>
+                    </div>
+
+                    <div class="member">
+                        <img src="image/user.png">
+                        <div>
+                            <strong>Eve</strong>
+                            <span>Student</span>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <div class="right">
+
+            <section class="eval-card eval-form">
+                <div class="card-header">Evaluation Form</div>
+
+                <div class="form-body">
+
+                    <div class="form-row">
+                        <label>Overall Progress:</label>
+
+                        <div class="slider-wrapper">
+
+                            <div class="scale-labels">
+                                <span>Poor</span>
+                                <span>Excellent</span>
+                            </div>
+
+                            <div class="slider-box">
+                                <input type="range" min="0" max="10" value="8" id="progressRange">
+                                <span id="rangeVal">8</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="rating-row">
+                        <span>Prototype Development:</span>
+                        <div class="star-group" data-name="proto"></div>
+                    </div>
+
+                    <div class="rating-row">
+                        <span>Report Quality:</span>
+                        <div class="star-group" data-name="report"></div>
+                    </div>
+
+                    <div class="rating-row">
+                        <span>Presentation & Communication:</span>
+                        <div class="star-group" data-name="presentation"></div>
+                    </div>
+
+                    <div class="form-row">
+                        <label>Comments:</label>
+                        <textarea placeholder="Write evaluation feedback..."></textarea>
+                    </div>
+
+                    <button class="submit-btn">Submit Evaluation</button>
+
+                </div>
+            </section>
+
+        </div>
+
+    </main>
+
+    <script src="evaluate-project.js"></script>
+</body>
+
+</html>

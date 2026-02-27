@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ProTrack | Group Management</title>
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css"
+  />
+
+  <!-- Base dashboard styles -->
+  <link rel="stylesheet" href="dashboard.css" />
+  <!-- Page specific -->
+  <link rel="stylesheet" href="student-group-leader.css" />
+</head>
+
+<body>
+
+  <!-- TOP BAR -->
+  <header class="topbar">
+    <div class="brand">
+      <img src="image/logo.png" alt="logo" />
+      <div class="brand-text">
+        <span class="brand-name">ProTrack</span>
+        <small class="brand-tagline">
+          Multi-Guide Project & Evaluation Management System
+        </small>
+      </div>
+    </div>
+
+    <!-- STUDENT DROPDOWN -->
+    <div class="user-dropdown">
+      <div class="user-info" id="studentMenuBtn">
+        <img src="image/user.png" />
+        <div>
+          <strong>Alice</strong>
+          <span>Student</span>
+        </div>
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+
+      <div class="dropdown-menu" id="studentDropdown">
+        <button onclick="location.href='HomeStudent.html'">
+          <i class="fa-solid fa-house"></i> Home
+        </button>
+        <button id="logoutBtn">
+          <i class="fa-solid fa-right-from-bracket"></i> Log out
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <a href="HomeStudent.html">Home</a> &nbsp;›&nbsp; IoT Smart Campus
+  </div>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <h1>IoT Smart Campus</h1>
+
+    <div class="invite">
+      <span>Invite Code:</span>
+      <strong id="inviteCode">3F8BK2</strong>
+      <button id="copyBtn" title="Copy Invite Code">
+        <i class="fa-regular fa-copy"></i>
+      </button>
+    </div>
+
+    <p>
+      Share this invite code with your friends (Max: 4 Members)
+    </p>
+
+    <button class="exit-btn">Exit Group</button>
+  </section>
+
+  <!-- SUCCESS MESSAGE -->
+  <div class="alert success">
+    <i class="fa-solid fa-circle-check"></i>
+    A new group has been created. Share invite code <strong>3F8BK2</strong> with your friends!
+    <span class="close">×</span>
+  </div>
+
+  <!-- CONTENT -->
+  <main class="group-container">
+
+    <!-- APPROVAL REQUESTS -->
+    <section class="card">
+      <h3>Approval Requests</h3>
+
+      <div class="request">
+        <div class="member-info">
+          <img src="image/user.png" />
+          <div>
+            <strong>Bob</strong>
+            <span>bob@yourcollege.edu</span>
+            <small>Guide: Dr. Williams</small>
+          </div>
+        </div>
+
+        <div class="actions">
+          <select>
+            <option>Member</option>
+            <option>Co-Leader</option>
+          </select>
+          <button class="approve">Approve</button>
+        </div>
+      </div>
+
+      <div class="request">
+        <div class="member-info">
+          <img src="image/user.png" />
+          <div>
+            <strong>Fiona</strong>
+            <span>fiona@yourcollege.edu</span>
+            <small>No Guide</small>
+          </div>
+        </div>
+
+        <div class="actions">
+          <select>
+            <option>Member</option>
+            <option>Co-Leader</option>
+          </select>
+          <button class="approve">Approve</button>
+        </div>
+      </div>
+
+      <p class="empty">No pending requests found.</p>
+    </section>
+
+    <!-- TEAM MEMBERS -->
+    <section class="card">
+      <h3>Team Members</h3>
+
+      <div class="member-row">
+        <div class="member-info">
+          <img src="image/user.png" />
+          <div>
+            <strong>Alice</strong>
+            <span>alice@yourcollege.edu</span>
+          </div>
+        </div>
+
+        <div class="actions">
+          <select disabled>
+            <option>Group Leader</option>
+          </select>
+          <button class="danger">
+            <i class="fa-solid fa-trash"></i>
+          </button>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="student-group-leader.js"></script>
+</body>
+</html>
