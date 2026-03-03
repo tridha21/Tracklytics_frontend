@@ -4,24 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const passwordInput = document.getElementById("password");
     const loginBtn = document.getElementById("loginBtn");
 
-    // Allowed users (email-based)
-    const USERS = {
-        "student@kiit.ac.in": {
-            role: "student",
-            password: "student123",
-            redirect: "HomeStudent.html"
-        },
-        "guide@kiit.ac.in": {
-            role: "guide",
-            password: "guide123",
-            redirect: "HomeGuide.html"
-        },
-        "admin@kiit.ac.in": {
-            role: "admin",
-            password: "admin123",
-            redirect: "HomeAdmin.html"
-        }
-    };
 
     const KIIT_EMAIL_REGEX = /^[a-zA-Z0-9._%+-]+@kiit\.ac\.in$/;
 
@@ -76,40 +58,61 @@ document.addEventListener("DOMContentLoaded", () => {
         clearError(passwordInput)
     );
 
-    form.addEventListener("submit", (e) => {
-        e.preventDefault();
+    form.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-        clearError(emailInput);
-        clearError(passwordInput);
+    clearError(emailInput);
+    clearError(passwordInput);
 
-        if (!validate()) return;
+    if (!validate()) return;
 
-        setLoading(true);
+    setLoading(true);
 
-        setTimeout(() => {
-            const email = emailInput.value.trim().toLowerCase();
-            const password = passwordInput.value.trim();
+    const email = emailInput.value.trim().toLowerCase();
+    const password = passwordInput.value.trim();
 
-            const user = USERS[email];
+    try {
+        const response = await fetch("http://localhost:7000/api/auth/login", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                email: email,
+                password: password
+            })
+        });
 
-            if (!user || user.password !== password) {
-                showError(passwordInput, "Invalid email or password");
-                setLoading(false);
-                return;
-            }
+        if (!response.ok) {
+            throw new Error("Invalid email or password");
+        }
 
-            // Save session
-            localStorage.setItem(
-                "protrack_user",
-                JSON.stringify({
-                    email,
-                    role: user.role
-                })
-            );
+        const user = await response.json();
 
-            // ✅ REDIRECT (THIS WILL NOW WORK)
-            window.location.href = user.redirect;
+        // ⚠️ Remove password if backend sends it
+        delete user.password;
 
-        }, 800);
-    });
+        // Save logged user
+        localStorage.setItem("protrack_user", JSON.stringify(user));
+
+        // Role-based redirect
+        if (user.role === "ADMIN") {
+            window.location.href = "HomeAdmin.html";
+        } 
+        else if (user.role === "GUIDE") {
+            window.location.href = "HomeGuide.html";
+        } 
+        else if (user.role === "STUDENT") {
+            window.location.href = "HomeStudent.html";
+        } 
+        else {
+            throw new Error("Unknown role");
+        }
+
+    } catch (error) {
+        showError(passwordInput, error.message);
+    } finally {
+        setLoading(false);
+    }
+});
 });

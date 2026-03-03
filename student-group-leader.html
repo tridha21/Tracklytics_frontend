@@ -4,15 +4,12 @@
   <meta charset="UTF-8" />
   <title>ProTrack | Group Management</title>
 
-  <!-- Font Awesome -->
   <link
     rel="stylesheet"
     href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css"
   />
 
-  <!-- Base dashboard styles -->
   <link rel="stylesheet" href="dashboard.css" />
-  <!-- Page specific -->
   <link rel="stylesheet" href="student-group-leader.css" />
 </head>
 
@@ -35,7 +32,7 @@
       <div class="user-info" id="studentMenuBtn">
         <img src="image/user.png" />
         <div>
-          <strong>Alice</strong>
+          <strong id="studentName"></strong>
           <span>Student</span>
         </div>
         <i class="fa-solid fa-chevron-down"></i>
@@ -53,107 +50,41 @@
   </header>
 
   <!-- BREADCRUMB -->
-  <div class="breadcrumb">
-    <a href="HomeStudent.html">Home</a> &nbsp;›&nbsp; IoT Smart Campus
+  <div class="breadcrumb" id="breadcrumb">
+    <a href="HomeStudent.html">Home</a>
   </div>
 
   <!-- PAGE HEADER -->
   <section class="page-header">
-    <h1>IoT Smart Campus</h1>
+    <h1 id="projectTitle"></h1>
 
     <div class="invite">
       <span>Invite Code:</span>
-      <strong id="inviteCode">3F8BK2</strong>
+      <strong id="inviteCode"></strong>
       <button id="copyBtn" title="Copy Invite Code">
         <i class="fa-regular fa-copy"></i>
       </button>
     </div>
 
-    <p>
-      Share this invite code with your friends (Max: 4 Members)
-    </p>
+    <p id="maxMembersText"></p>
 
     <button class="exit-btn">Exit Group</button>
   </section>
-
-  <!-- SUCCESS MESSAGE -->
-  <div class="alert success">
-    <i class="fa-solid fa-circle-check"></i>
-    A new group has been created. Share invite code <strong>3F8BK2</strong> with your friends!
-    <span class="close">×</span>
-  </div>
 
   <!-- CONTENT -->
   <main class="group-container">
 
     <!-- APPROVAL REQUESTS -->
-    <section class="card">
+    <section class="card" id="approvalSection">
       <h3>Approval Requests</h3>
-
-      <div class="request">
-        <div class="member-info">
-          <img src="image/user.png" />
-          <div>
-            <strong>Bob</strong>
-            <span>bob@yourcollege.edu</span>
-            <small>Guide: Dr. Williams</small>
-          </div>
-        </div>
-
-        <div class="actions">
-          <select>
-            <option>Member</option>
-            <option>Co-Leader</option>
-          </select>
-          <button class="approve">Approve</button>
-        </div>
-      </div>
-
-      <div class="request">
-        <div class="member-info">
-          <img src="image/user.png" />
-          <div>
-            <strong>Fiona</strong>
-            <span>fiona@yourcollege.edu</span>
-            <small>No Guide</small>
-          </div>
-        </div>
-
-        <div class="actions">
-          <select>
-            <option>Member</option>
-            <option>Co-Leader</option>
-          </select>
-          <button class="approve">Approve</button>
-        </div>
-      </div>
-
-      <p class="empty">No pending requests found.</p>
+      <div id="approvalList"></div>
+      <p class="empty" id="approvalEmpty">No pending requests found.</p>
     </section>
 
     <!-- TEAM MEMBERS -->
     <section class="card">
       <h3>Team Members</h3>
-
-      <div class="member-row">
-        <div class="member-info">
-          <img src="image/user.png" />
-          <div>
-            <strong>Alice</strong>
-            <span>alice@yourcollege.edu</span>
-          </div>
-        </div>
-
-        <div class="actions">
-          <select disabled>
-            <option>Group Leader</option>
-          </select>
-          <button class="danger">
-            <i class="fa-solid fa-trash"></i>
-          </button>
-        </div>
-      </div>
-
+      <div id="teamList"></div>
     </section>
 
   </main>
